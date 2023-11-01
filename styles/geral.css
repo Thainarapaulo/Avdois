@@ -1,0 +1,123 @@
+/* GERAL */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    --rosaSuave:rgba(255, 204, 204, 0.8);
+    --rosaEscuro: pink;
+    --boxShadow:rgb(235, 135, 152);
+    --titulo:rgb(207, 90, 90);
+
+}
+body{
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+/* CORPO LOGIN */
+.corpo-login{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--rosaEscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-esquerdo{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login-esquerdo > h1{
+   color: var(--titulo);
+   font-size: 2vw;
+   padding-bottom: 20px;
+
+}
+/* FORMULARIO */
+.login-direito{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartao-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color:var(--rosaSuave);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px var(--boxShadow);
+}
+.cartao-login > h1{
+    color: var(--titulo);
+    font-weight: 800;
+}
+.textfield{
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.textfield > input{
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    background-color:white;
+    color: var(--titulo);
+    font-size: 12px;
+    box-shadow: 0px 10px 40px var(--boxShadow);
+    outline: none;
+}
+input:focus{
+    border-color: palevioletred;
+}
+.textfield > label{
+    color:brown;
+    margin-bottom: 10px;
+}
+.textfield > input::placeholder{
+    color: gray;
+}
+#ibotao{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: brown;
+    background-color:rgb(212, 111, 111);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px var(--boxShadow);
+}
+#ibotao:hover{
+    background-color:#b85b90;
+}
+#links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+#links a{
+    color: brown;
+    text-decoration: none;
+}

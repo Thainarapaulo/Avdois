@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ept-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../styles/cadastro.css">
+    <link rel="stylesheet" href="../styles/geral.css">
+    <link rel="shortcut icon" href="../images/logo_size.jpg" type="image/x-icon">
+</head>
+    <body>
+        <!-- CABEÇALHO -->
+        <header>
+            <img src="../images/IMPÉRIO COSMÉTICOS.png" alt="">
+        </header>
+        <!-- CORPO LOGIN -->
+        <section class="corpo-login ">
+            <section class="login-esquerdo">
+                <h3>Dê mais destaque aos seus traços marcantes.</h3>
+                <h4>Cuide de você, cuide do seu corpo.</h4>
+                <h3>O que você precisa está na Império Cosméticos.</h3>
+                <h4>Encante todo mundo.</h4>
+            </section>
+            <!-- FORMULÁRIO -->
+            <form class="login-direito" autocomplete="on">
+                <section class="cartao-login">
+                    <h1>CADASTRAR CONTA</h1>
+                    <section class="textfield">
+                        <label for="iusuario">E-mail</label>
+                        <input type="email" name="email" id="iemail" placeholder="E-mail" autocomplete="email">
+                    </section>
+                    <section class="textfield">
+                        <label for="isenha">Senha</label>
+                        <input type="password" name="senha" id="isenha" placeholder="Senha" autocomplete="cc-number">
+                    </section>
+                    <section class="textfield">
+                        <label for="icelular">Celular</label>
+                        <input type="tel" name="celular" id="icelular" placeholder="(xx)xxxx-xxxx" autocomplete="tel">
+                    </section>
+                    <section class="local">
+                    <section class="textfield">
+                        <label for="icpf">CPF</label>
+                        <input type="text" name="cpf" id="icpf" placeholder="000.000.000-00" maxlength="14">
+                    </section>
+                    <section class="textfield">
+                        <label for="icep">CEP</label>
+                        <input type="text" name="cep" id="icep" placeholder="00000-000" maxlength="8">
+                    </section>
+                    </section>
+                    <section class="regiao">
+                        <section class="textfield">
+                            <label for="iendereco">Endereço</label>
+                            <input type="text" name="endereco" id="iendereco" placeholder="Endereço" autocomplete="shipping-address">
+                        </section>
+                        <section class="textfield">
+                            <label for="iestado">Estado</label>
+                            <input name="estado" id="iestado" placeholder="Selecione" list="estados">
+                            <datalist id="estados">
+                                    <option value="Acre">
+                                    <option value="Alagoas">
+                                    <option value="Amapá">
+                                    <option value="Amazonas">
+                                    <option value="Bahia">
+                                    <option value="Ceará">
+                                    <option value="Distrito Federal">
+                                    <option value="Espírito Santo">
+                                    <option value="Goiás">
+                                    <option value="Maranhão">
+                                    <option value="Mato Grosso">
+                                    <option value="Mato Grosso do Sul">
+                                    <option value="Minas Gerais">
+                                    <option value="Pará">
+                                    <option value="Paraíba">
+                                    <option value="Paraná">
+                                    <option value="Pernambuco">
+                                    <option value="Piauí">
+                                    <option value="Rio de Janeiro">
+                                    <option value="Rio Grande do Norte">
+                                    <option value="Rio Grande do Sul">
+                                    <option value="Rondônia">
+                                    <option value="Roraima">
+                                    <option value="Santa Catarina">
+                                    <option value="São Paulo">
+                                    <option value="Sergipe">
+                                    <option value="Tocantins">
+                            </datalist>
+                        </section>
+                        </section>
+                    <input type="submit" id="ibotao" value="Cadastrar">
+                    <nav id="links">
+                        <a href="../index.html">Voltar ao Login</a>
+                    </nav>
+                </section>
+            </form>
+        </section>
+</body>
+</html>
