@@ -1,0 +1,8 @@
+/* CABEÇALHO */
+form a{
+    color: var(--texto);
+    text-decoration: none;
+}
+h1,h5{
+    text-align: justify;
+}

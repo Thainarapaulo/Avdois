@@ -13,8 +13,15 @@
     --boxShadow:rgb(235, 135, 152);
     --titulo:rgb(207, 90, 90);
     --texto:brown;
+    --branco:white;
+    --roxo:#b85b90;
 
 }
+/* CABEÇALHO */
+header,footer{
+    background-color: var(--boxShadow);
+} 
+/* CORPO */
 body{
     font-family: 'Playfair Display', serif;
 }
