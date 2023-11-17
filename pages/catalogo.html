@@ -13,18 +13,33 @@
 <body>
     <!-- CABEÇALHO -->
     <header>
-        <nav class="navbar navbar-expand-md px-2">
-            <div class="container-fluid px-5">
-              <a class="navbar-brand"><img class=" logo w-50 rounded " style="padding-left: 2px;" src="../images/logo_size.jpg" alt=""></a>
-              <form class="botao d-flex align-items-center gap-4 px-5" role="search">
-                <a href="../pages/home.html"><h5>Home</h5></a>
-                <a href="../pages/sobrenos.html"><h5>Sobre Nós</h5></a>
-                <a href="../pages/catalogo.html"><h5>Catálogo</h5></a>
-                <a href="../index.html"><h5>Login</h5></a>
-                <a href="../pages/cadastro.html"><h5>Cadastrar</h5></a>
-            </form>
-            </div>
-          </nav>
+      <nav class="navbar navbar-expand-lg px-2 ">
+        <div class="container-fluid px-5">
+          <a class="navbar-brand" href="#"><img class=" logo w-50 rounded " style="padding-left: 2px;" src="../images/logo_size.jpg" alt=""></a>
+          <button class="navbar-toggler" style="background-color: var(--titulo); border-color: var(--texto);" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav gap-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" style="color: var(--texto);" href="../pages/home.html"><h5>Home</h5></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" style="color: var(--texto);" href="../pages/sobrenos.html"><h5>Sobre Nós</h5></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" style="color: var(--texto);" href="../pages/catalogo.html"><h5>Catálogo</h5></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" style="color: var(--texto);" href="../index.html"><h5>Login</h5></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" style="color: var(--texto);" href="../pages/cadastro.html"><h5>Cadastrar</h5></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- CORPO -->
     <main>
@@ -37,13 +52,13 @@
                 </div>
                 <div class="carousel-inner container-fluid p-0 m-0 py-2">
                   <div class="carousel-item active">
-                    <img src="../images/carousel1.jpg" class="d-block w-100" alt="...">
+                    <img src="../images/carousel1.jpg" class="d-block w-100 img-fluid d-xl-block" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../images/carousel3.png" class="d-block w-100" alt="...">
+                    <img src="../images/carousel3.png" class="d-block w-100 img-fluid d-xl-block" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../images/carousel2.jpg" class="d-block w-100" alt="...">
+                    <img src="../images/carousel2.jpg" class="d-block w-100 img-fluid d-xl-block" alt="...">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -56,9 +71,9 @@
                 </button>
               </div>
         </section>
-        <section id="catalogoSection" class="container-fluid p-0 my-1 mx-0 py-2">
+        <section id="catalogoSection" class="container-fluid p-0 my-1 mx-0 py-2 d-xl-block">
             <h3 class="my-4 text-center" style="color: var(--titulo); font-weight: 900;">CATÁLOGO DE PRODUTOS</h3>
-            <div id="catalogoProdutos" class="container-fluid d-flex justify-content-center gap-4 flex-wrap">
+            <div id="catalogoProdutos" class="container-fluid d-flex justify-content-center gap-4 flex-wrap ">
                <!-- PRODUTO 1 -->
                 <div class="card p-2 text-center" style="width: 20rem;border-radius: 0%;">
                     <img style="border-radius: 0%;" src="../images/produto.png" class="card-img-top" alt="">

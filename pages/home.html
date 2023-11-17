@@ -13,16 +13,31 @@
 <body>
     <!-- CABEÇALHO -->
     <header>
-        <nav class="navbar navbar-expand-md px-2">
+        <nav class="navbar navbar-expand-lg px-2 ">
             <div class="container-fluid px-5">
-              <a class="navbar-brand"><img class=" logo w-50 rounded " style="padding-left: 2px;" src="../images/logo_size.jpg" alt=""></a>
-              <form class="botao d-flex align-items-center gap-4 px-5" role="search">
-                <a href="../pages/home.html"><h5>Home</h5></a>
-                <a href="../pages/sobrenos.html"><h5>Sobre Nós</h5></a>
-                <a href="../pages/catalogo.html"><h5>Catálogo</h5></a>
-                <a href="../index.html"><h5>Login</h5></a>
-                <a href="../pages/cadastro.html"><h5>Cadastrar</h5></a>
-            </form>
+              <a class="navbar-brand" href="#"><img class=" logo w-50 rounded " style="padding-left: 2px;" src="../images/logo_size.jpg" alt=""></a>
+              <button class="navbar-toggler" style="background-color: var(--titulo);" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav gap-2">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" style="color: var(--texto);" href="../pages/home.html"><h5>Home</h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" style="color: var(--texto);" href="../pages/sobrenos.html"><h5>Sobre Nós</h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" style="color: var(--texto);" href="../pages/catalogo.html"><h5>Catálogo</h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" style="color: var(--texto);" href="../index.html"><h5>Login</h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" style="color: var(--texto);" href="../pages/cadastro.html"><h5>Cadastrar</h5></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </nav>
     </header>

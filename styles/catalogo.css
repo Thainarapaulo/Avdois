@@ -3,8 +3,12 @@ form a{
     color: var(--texto);
     text-decoration: none;
 }
+/* .carousel-inner{
+    height: 800px;
+    background-color: black;
+} */
 p, h3,h5{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 .card button{
     border-radius: 5px;
@@ -14,4 +18,13 @@ p, h3,h5{
 }
 .card button:hover{
     background-color: #b85b90;
+}
+@media screen and (max-width:1050px){
+    #catalogoProdutos{
+        align-items: center;
+        flex-direction: column;
+    }
+    #catalogoProdutos div{
+        width: 100%;
+    }
 }

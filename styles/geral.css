@@ -22,7 +22,7 @@ header,footer{
     background-color: var(--boxShadow);
 } 
 /* CORPO */
-body{
+body,h5{
     font-family: 'Playfair Display', serif;
 }
 /* CORPO LOGIN */
@@ -128,3 +128,4 @@ input:focus{
     color: brown;
     text-decoration: none;
 }
+
