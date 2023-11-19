@@ -24,7 +24,4 @@ p, h3,h5{
         align-items: center;
         flex-direction: column;
     }
-    #catalogoProdutos div{
-        width: 100%;
-    }
 }

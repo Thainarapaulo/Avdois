@@ -39,4 +39,9 @@ h4{
 #icpf, #icep, #iendereco, #iestado{
     width: 210px;
 }
-
+@media screen and (max-width:1050px) {
+.local, .regiao{
+   flex-direction: column;
+}
+    
+}
