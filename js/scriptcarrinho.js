@@ -1,33 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    const listaCarrinho = document.getElementById("lista-carrinho");
-    const totalCarrinho = document.getElementById("total-carrinho");
+var resumo = document.querySelector("#descricao");
+var qtdeProduto = document.querySelector("#qtdeProduto");
+var total = document.querySelector("#valorTotal"); 
+var valorProduto;
+var valorTotaldaCompra;
 
-    // Adicionar itens do carrinho à lista
-    carrinho.forEach(function (item) {
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `
-        <div class="produto-carrinho">
-                <img src="${item.imagem}" alt="${item.nome}" class="w-50">
-                <div class="info-produto">
-                    <p>${item.nome}</p>
-                    <p>R$ ${item.preco.toFixed(2)}</p>
-                </div>
-            </div>
-        `;
-        listaCarrinho.appendChild(listItem);
-    });
+resumo.innerHTML = '<p><strong> Descrição do Produto</strong></p>' + sessionStorage.descricao + '<strong>' + sessionStorage.valor + '</strong>';
+qtdeProduto.addEventListener('change', calculavalorTotalCompra);
 
-    // Calcular e exibir o preço total
-    const total = calcularTotal();
-    totalCarrinho.textContent = `Total: R$ ${total.toFixed(2)}`;
+valorProduto = parseFloat(sessionStorage.valor.replace('R$', '').replace(',', '.'));
 
-    // Função para calcular o preço total dos itens no carrinho
-    function calcularTotal() {
-        let total = 0;
-        carrinho.forEach(function (item) {
-            total += item.preco;
-        });
-        return total;
-    }
-});
+function calculavalorTotalCompra(){
+    valorTotaldaCompra = valorProduto * qtdeProduto.value;
+    total.innerHTML = '<p><strong>Valor total da compra:</strong></p>' + '<strong>R$:' + valorTotaldaCompra + '</strong>';
+}
+
+sessionStorage.descricao = document.querySelector("#descricao").innerHTML;
+sessionStorage.valor = document.querySelector("#valor").innerHTML;
+
+function resumoCompra(){
+    window.location = "../pages/carrinho.html";
+}

@@ -79,9 +79,6 @@
                     <img style="border-radius: 0%;" src="../images/produto.png" class="card-img-top" alt="">
                     <div class="card-body">
                       <h4 class="card-title">Sistema Timewise 3D</h4>
-                      <p class="card-text">Gel de Limpeza 4 em 1: 127g;
-                        Creme Diurno FPS 30 e Creme Noturno: 48g cada;
-                        Creme para área dos olhos: 14g</p>
                        <h5 class="card-text" style="color:var(--titulo)"> R$ 200,00 </h5>
                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#produto1">
                        COMPRAR
@@ -157,19 +154,19 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Sistema Timewise 3D</h5>
+              <h5  id="descricao"  class="modal-title">Sistema Timewise 3D</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <img class="w-100" src="../images/produto.png" alt="">
-              <h3 style="color: var(--titulo);"> R$ 200,00</h3>
+              <h3 id="valor" style="color: var(--titulo);"> R$ 200,00</h3>
               <p style="text-align: center;">Gel de Limpeza 4 em 1: 127g;
                 Creme Diurno FPS 30 e Creme Noturno: 48g cada;
                 Creme para área dos olhos: 14g</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
+              <button id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
             </div>
           </div>
         </div>
@@ -189,8 +186,8 @@
                 Passo 2: Restaurar 29ml</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
+              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
             </div>
           </div>
         </div>
@@ -209,8 +206,8 @@
               <p style="text-align: center;">A unidade: 7,5ml</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
+              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
             </div>
           </div>
         </div>
@@ -231,8 +228,8 @@
                 Máscara: 400g</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
+              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
             </div>
           </div>
         </div>
@@ -251,8 +248,8 @@
               <p style="text-align: center;">Spray: 147ml</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success" id="btn5">Adicionar no carrinho</button>
+              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn5">Adicionar no carrinho</button>
             </div>
           </div>
         </div>
@@ -271,8 +268,8 @@
               <p style="text-align: center;">Sombra cintilante intensa e glitter 3D.</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success" id="btn6" onclick="adicionarAoCarrinho('Kit DaBelle Hair Intense', 30.00, '../images/produto6.jpeg')">Adicionar no carrinho</button>
+              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn6" onclick="adicionarAoCarrinho('Kit DaBelle Hair Intense', 30.00, '../images/produto6.jpeg')">Adicionar no carrinho</button>
             </div>
           </div>
         </div>

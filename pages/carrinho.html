@@ -6,9 +6,10 @@
     <title>Carrinho</title>
     <link rel="stylesheet" href="../styles/bootstrap.css">
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
-    <link rel="shortcut icon" href="../images/IMPÉRIO COSMÉTICOS.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/carrinho.css">
     <link rel="stylesheet" href="../styles/geral.css">
+    <link rel="shortcut icon" href="../images/IMPÉRIO COSMÉTICOS.png" type="image/x-icon">
+
 
 </head>
 <body>
@@ -40,20 +41,33 @@
               </header>
                <!-- CORPO -->
                <main>
-                <div class="titulo">Seu Carrinho</div>
-                <ul id="lista-carrinho"></ul>
-                <p id="total-carrinho"></p>
+                <div class="container py-5">
+                  <div class="quadroContainer row container-fluid justify-content-center">
+                    <div class="col-sm-4">
+                      <h3>Meu Carrinho</h3>
+                      <div class="jumbotron h-100 w-100 justify-content-center">
+                        <div id="descricao"></div>
+                        <strong><label>Quantidade</label></strong>
+                        <input type="number" id="qtdeProduto"></div>
+                    </div>
+                    <div class="col-sm-4">
+                       <h3>Resumo da Compra</h3>
+                       <div id="resumoTela" class="jumbotron">
+                        <div id="valorTotal"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid d-flex justify-content-center mt-5">
+                <button class="w-25 h-25 mt-5" id="finalizar" type="button">Continuar</button>
+              </div>
             </main>
-              <!-- RODAPE
-        <footer class="rodape py-3">
-           <p class="introRodape text-center" style="color: var(--texto);">Todos os direitos reservados a Império Cosméticos</p>
-        </footer> -->
     
-    <script src="../js/jquery-3.7.1.js"></script>
-    <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/scriptcarrinho.js"></script>
-
-  
+<script src="../js/jquery-3.7.1.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/scriptcarrinho.js"></script> 
+<script src="../js/scriptcatalogo.js"></script> 
+<script src="../js/scriptfinalizarcompra.js"></script>
 </body>
 </html>
