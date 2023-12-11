@@ -7,17 +7,13 @@ function adicionarAoCarrinho(nomeProduto, precoProduto, imagemProduto) {
     let produtoExistente = carrinho.find(produto => produto.nome === nomeProduto);
 
     if (produtoExistente) {
-      // Se o produto já existe, aumenta a quantidade
       produtoExistente.quantidade = (produtoExistente.quantidade || 1) + 1;
     } else {
-      // Se o produto não existe, adiciona ao carrinho
       carrinho.push({ nome: nomeProduto, preco: precoProduto, imagem: imagemProduto, quantidade: 1 });
 
-      // Adiciona o item ao carrinho visualmente
       adicionarItemVisualmente(nomeProduto, precoProduto, imagemProduto);
     }
 
-    // Salva o carrinho na sessão
     sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
   }
 

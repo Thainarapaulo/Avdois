@@ -1,6 +1,5 @@
 // Função para exibir produtos no carrinho
 function exibirCarrinho() {
-    // Obtém o carrinho da sessão
     let carrinho = JSON.parse(sessionStorage.getItem('carrinho')) || [];
     let listaCarrinho = document.getElementById('lista-carrinho');
     let totalCarrinho = document.getElementById('total-carrinho');
@@ -17,7 +16,7 @@ function exibirCarrinho() {
       let img = document.createElement('img');
       img.src = produto.imagem;
       img.alt = produto.nome;
-      img.style.width = '50px'; // Defina a largura desejada para a imagem
+      img.style.width = '50px'; 
       li.appendChild(img);
   
       // Adiciona o nome e preço do produto
@@ -27,9 +26,8 @@ function exibirCarrinho() {
       let quantidadeInput = document.createElement('input');
       quantidadeInput.type = 'number';
       quantidadeInput.min = 1;
-      quantidadeInput.value = produto.quantidade || 1; // Valor padrão 1 se não houver quantidade definida
+      quantidadeInput.value = produto.quantidade || 1; 
       quantidadeInput.addEventListener('change', function () {
-        // Atualiza a quantidade no carrinho quando o valor do input é alterado
         atualizarQuantidade(index, parseInt(this.value, 10));
       });
       li.appendChild(quantidadeInput);
@@ -89,9 +87,17 @@ function exibirCarrinho() {
   
   // Função para limpar o carrinho
   function limparCarrinho() {
-    // Limpa o carrinho na sessão
     sessionStorage.removeItem('carrinho');
   
-    // Atualiza a exibição do carrinho
     exibirCarrinho();
   }
+
+  function finalizarCompra() {
+   
+    alert("Compra finalizada! Obrigado por sua compra.");
+  }
+  var slider = $("#slider");
+  $("#animacao7").on('click',function(){
+    slider.slideToggle(1000);
+ }); 
+ 

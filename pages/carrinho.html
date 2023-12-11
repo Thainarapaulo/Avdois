@@ -6,11 +6,11 @@
     <title>Carrinho</title>
     <link rel="stylesheet" href="../styles/bootstrap.css">
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/all.min.css">
     <link rel="stylesheet" href="../styles/carrinho.css">
     <link rel="stylesheet" href="../styles/geral.css">
     <link rel="shortcut icon" href="../images/IMPÉRIO COSMÉTICOS.png" type="image/x-icon">
-
-
+  
 </head>
 <body>
       <!-- CABEÇALHO -->
@@ -41,28 +41,33 @@
               </header>
                <!-- CORPO -->
                <main>
-               <h4  style="color: var(--texto); display: flex; justify-content: center; padding-top:20px;">Meu Carrinho</h4>
+               <h4  style="color: var(--texto); display: flex; justify-content: center; padding-top:20px;">Minha Sacola</h4>
                <form autocomplete="on" class="d-flex d-flex  flex-column justify-content-center overflow-y-auto">
-                     
-             
-                <ul id="lista-carrinho"></ul>
+                <section class="container-fluid justify-content-center px-5 pt-3">
+                <ul class="text-center" id="lista-carrinho"></ul>
                   
-                  
-                
-                  
-  
-                <p id="total-carrinho">Total:</p>
-                <div class="d-flex aligm-content-center justify-content-center gap-3">
-                <button type="button" class="py-2 px-2" style="background-color: white; border: none; color: white;">Comprar</button>
-                <button type="button" class="py-2 px-2" style="background-color: white; border: none; color:white" onclick="limparCarrinho()">Limpar Carrinho</button>
-                </div>
-  
-                <a href="../pages/catalogo.html" class="text-center py-3"><pre>Voltar para página de catalogo</pre></a>
-                                                   
+                <strong><p class="text-center" id="total-carrinho">Total:</p></strong>
+               </section>
+                <div class="d-flex aligm-content-center justify-content-center gap-3 pt-5">
+                <button type="button" class="py-2 px-2" style="background-color: white; border: none; color: var(--texto);"onclick="finalizarCompra()">Finalizar Comprar</button>
+                <button type="button2" class="py-2 px-2" style="background-color: white; border: none; color: var(--texto);" onclick="limparCarrinho()">Limpar Sacola</button>
+                </div>  
               </form>
             </main>
-
+           <footer>
+            <div class="d-flex justify-content-center">
+              <button type="button" id="animacao7" style="background-color: var(--boxshadow); border: none; color: var(--texto);">Contato</button>
+          </div>             
+          <div class="d-flex justify-content-center" id="slider">
+              <ul>
+                <li><a href="#" target="_blank" title="instagram" style="color: var(--texto)" ><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank" title="whatsapp" style="color: var(--texto)" ><i class="fab fa-whatsapp"></i></a></li>                             
+                <li><a href="#" target="_blank" title="email" style="color: var(--texto)" ><i class="fa-regular fa-envelope"></i></a></li>                             
+            </ul>
+             </div>
+           </footer>
     <script src="../js/jquery-3.7.1.js"></script>
+    <script src="../js/all.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/scriptcatalogo.js"></script>
     <script src="../js/fecharcarrinho.js"></script>
