@@ -28,3 +28,22 @@ p,h3{
     width: 100%;
 
 }
+#abrirCarrinho{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+#fecharCarrinho{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+#lista-carrinho input {
+    width: 50px; /* Defina a largura desejada para o input */
+  }

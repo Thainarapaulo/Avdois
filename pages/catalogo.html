@@ -36,12 +36,33 @@
               <li class="nav-item">
                 <a class="nav-link active" style="color: var(--texto);" href="../pages/cadastro.html"><h5>Cadastrar</h5></a>
               </li>
+              <li>
+                <button type="button" id="abrirCarrinho">Carrinho</button>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
     <!-- CORPO -->
+    <section id="carrinho1" class="fixed-top" style="width: 30%; height: 100vh; background-color: palevioletred;; display:none;">
+      <div>
+        <div class="d-flex justify-content-end">
+          <button id="fecharCarrinho">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </button>
+        </div>
+        <p class="text-center">Meu Carrinho</p>
+        <ul id="lista-carrinho" class="overflow-y-auto py-5 d-flex flex-column gap-3 " style="height: 500px;">
+        </ul>
+        <p id="total-carrinho">Total:</p>
+        <button type="button" class="py-2 px-2" style="background-color: palevioletred;; border: none; color:white" onclick="limparCarrinho()">Limpar Carrinho</button>
+        <a href="../pages/carrinho.html" class="btn-compra btn mx-1">Comprar</a>
+      </div>
+    </section>
     <main>
         <section>
             <div id="carouselExampleIndicators" class="carousel slide">
@@ -80,9 +101,10 @@
                     <div class="card-body">
                       <h4 class="card-title">Sistema Timewise 3D</h4>
                        <h5 class="card-text" style="color:var(--titulo)"> R$ 200,00 </h5>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#produto1">
+                       <button type="button" class="btn btn-primary btn-comprar"
+                       data-bs-toggle="modal" data-bs-target="#produto1">
                        COMPRAR
-                      </button>                            
+                   </button>                           
                     </div>
                   </div>      
                    <!-- PRODUTO 2 -->    
@@ -93,9 +115,10 @@
                       <p class="card-text">Passo 1: Refinar 70g
                         Passo 2: Restaurar 29ml</p>
                        <h5 class="card-text" style="color:var(--titulo)"> R$ 150,00 </h5>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#produto2">
+                       <button type="button" class="btn btn-primary btn-comprar"
+                       data-bs-toggle="modal" data-bs-target="#produto2">
                        COMPRAR
-                      </button>                            
+                   </button>                          
                     </div>
                   </div>    
                   <!-- PRODUTO 3 -->
@@ -105,9 +128,13 @@
                       <h4 class="card-title">Esmalte Impala</h4>
                       <p class="card-text">A unidade: 7,5ml</p>
                        <h5 class="card-text" style="color: var(--titulo);"> R$ 2,99 </h5>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#produto3">
+                       <button type="button" class="btn btn-primary btn-comprar"
+                       data-nome="Esmalte Impala"
+                       data-preco=" 2,99"
+                       data-imagem="../images/produto3.jpg"
+                       data-bs-toggle="modal" data-bs-target="#produto3">
                        COMPRAR
-                      </button>                            
+                   </button>                           
                     </div>
                   </div>   
                    <!--PRODUTO 4 -->
@@ -119,9 +146,14 @@
                         Potencializador fortificante: 30ml;
                         Máscara: 400g</p>
                        <h5 class="card-text" style="color: var(--titulo);"> R$ 65,00 </h5>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#produto4">
+                       <button type="button" class="btn btn-primary btn-comprar"
+                       data-nome=">Kit DaBelle Hair Intense Explosão de Brilho Hidra-Fortificante 4"
+                       data-preco="65.00"
+                       data-imagem="../images/produto4.jpg"
+                       data-bs-toggle="modal" data-bs-target="#produto4">
                        COMPRAR
-                      </button>                            
+                   </button>
+                                      
                     </div>
                   </div>    
                    <!--PRODUTO 5 -->
@@ -131,9 +163,13 @@
                       <h4 class="card-title">Spray Corporal Deo Colônia - Amora & Baunilha</h4>
                       <p class="card-text">Spray: 147ml</p>
                        <h5 class="card-text" style="color: var(--titulo);"> R$ 49,90</h5>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#produto5">
+                       <button type="button" class="btn btn-primary btn-comprar"
+                       data-nome="Spray Corporal Deo Colônia - Amora & Baunilha"
+                       data-preco="49.90"
+                       data-imagem="../images/produto5.jpg"
+                       data-bs-toggle="modal" data-bs-target="#produto5">
                        COMPRAR
-                      </button>                            
+                   </button>                           
                     </div>
                   </div>    
                    <!--PRODUTO 6 -->
@@ -143,9 +179,9 @@
                       <h4 class="card-title">Paleta Duo Shine Collection - Rose Gold - Ruby Kisses</h4>
                       <p class="card-text">Sombra cintilante intensa e glitter 3D.</p>
                        <h5 class="card-text" style="color: var(--titulo);"> R$ 30,00 </h5>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#produto6">
+                       <button type="button" class="btn btn-primary btn-comprar"data-bs-toggle="modal" data-bs-target="#produto6">
                        COMPRAR
-                      </button>                            
+                   </button>                            
                     </div>
                   </div>    
             </div>
@@ -154,19 +190,19 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5  id="descricao"  class="modal-title">Sistema Timewise 3D</h5>
+              <h5 class="modal-title">Sistema Timewise 3D</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <img class="w-100" src="../images/produto.png" alt="">
-              <h3 id="valor" style="color: var(--titulo);"> R$ 200,00</h3>
+              <h3 style="color: var(--titulo);"> R$ 200,00</h3>
               <p style="text-align: center;">Gel de Limpeza 4 em 1: 127g;
                 Creme Diurno FPS 30 e Creme Noturno: 48g cada;
                 Creme para área dos olhos: 14g</p>
             </div>
             <div class="modal-footer">
-              <button id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
+              <button type="button" class="btn btn" style="background-color:rgb(212, 111, 111);" data-bs-dismiss="modal">Cancelar</button>
+              <a href="../pages/carrinho.html" class="btn btn" style="background-color:rgb(212, 111, 111);" onclick="adicionarAoCarrinho('Sistema Timewise 3D', 200.00, '../images/produto.png')">Adicionar ao Carrinho</a>
             </div>
           </div>
         </div>
@@ -186,8 +222,8 @@
                 Passo 2: Restaurar 29ml</p>
             </div>
             <div class="modal-footer">
-              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
+              <button  type="button" class="btn btn" style="background-color:rgb(212, 111, 111);" data-bs-dismiss="modal">Cancelar</button>
+              <a href="../pages/carrinho.html" class="btn btn" style="background-color:rgb(212, 111, 111);" onclick="adicionarAoCarrinho('Kit Microdermoabrasão Timewise', 150.00, '../images/produto2.jpg')">Adicionar ao Carrinho</button>
             </div>
           </div>
         </div>
@@ -206,8 +242,8 @@
               <p style="text-align: center;">A unidade: 7,5ml</p>
             </div>
             <div class="modal-footer">
-              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-            <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
+              <button  id="remover" type="button" class="btn btn" style="background-color:rgb(212, 111, 111);" data-bs-dismiss="modal">Cancelar</button>
+              <a href="../pages/carrinho.html" class="btn btn" style="background-color:rgb(212, 111, 111);" onclick="adicionarAoCarrinho('Esmalte Impala', 2.99, '../images/produto3.jpg')">Adicionar ao carrinho</button>
             </div>
           </div>
         </div>
@@ -228,8 +264,8 @@
                 Máscara: 400g</p>
             </div>
             <div class="modal-footer">
-              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn1">Adicionar no carrinho</button>
+              <button  id="remover" type="button" class="btn btn" style="background-color:rgb(212, 111, 111);" data-bs-dismiss="modal">Cancelar</button>
+              <a href="../pages/carrinho.html" class="btn btn" style="background-color:rgb(212, 111, 111);" onclick="adicionarAoCarrinho('Kit DaBelle Hair Intense Explosão de Brilho Hidra-Fortificante 4', 65.00, '../images/produto4.png')">Adicionar ao carrinho</button>
             </div>
           </div>
         </div>
@@ -248,8 +284,8 @@
               <p style="text-align: center;">Spray: 147ml</p>
             </div>
             <div class="modal-footer">
-              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn5">Adicionar no carrinho</button>
+              <button  type="button" class="btn btn" style="background-color:rgb(212, 111, 111);" data-bs-dismiss="modal">Cancelar</button>
+              <a href="../pages/carrinho.html" class="btn btn" style="background-color:rgb(212, 111, 111);" onclick="adicionarAoCarrinho('Spray Corporal Deo Colônia - Amora & Baunilha', 49.90 , '../images/produto5.png')">Adicionar ao carrinho</button>
             </div>
           </div>
         </div>
@@ -268,20 +304,19 @@
               <p style="text-align: center;">Sombra cintilante intensa e glitter 3D.</p>
             </div>
             <div class="modal-footer">
-              <button  id="remover" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button onclick="resumoCompra()" type="button" class="btn btn-success" id="btn6" onclick="adicionarAoCarrinho('Kit DaBelle Hair Intense', 30.00, '../images/produto6.jpeg')">Adicionar no carrinho</button>
+              <button type="button" class="btn btn" style="background-color:rgb(212, 111, 111);" data-bs-dismiss="modal">Cancelar</button>
+              <a href="../pages/carrinho.html" class="btn" style="background-color:rgb(212, 111, 111);" onclick="adicionarAoCarrinho('Kit DaBelle Hair Intense Explosão de Brilho Hidra-Fortificante 4', 30.00, '../images/produto6.jpeg')" >Adicionar ao carrinho</button>
             </div>
           </div>
         </div>
       </div>
         </section>   
     </main>
-<footer class="rodape py-3">
-    <p class="introRodape text-center" style="color: var(--texto);">Todos os direitos reservados a Império Cosméticos</p>
-</footer>
 <script src="../js/jquery-3.7.1.js"></script>
-<script src="../js/script.js"></script>
 <script src="../js/bootstrap.bundle.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/scriptcatalogo.js"></script>
+<script src="../js/scriptcarrinho.js"></script>
+<script src="../js/fecharcarrinho.js"></script>
 </body>
 </html>
