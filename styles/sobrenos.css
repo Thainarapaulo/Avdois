@@ -60,3 +60,8 @@ h1,h5{
 .btn_social ul li a:hover {
      color:#b85b90;
      }
+footer{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
