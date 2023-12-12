@@ -3,10 +3,6 @@ form a{
     color: var(--texto);
     text-decoration: none;
 }
-/* .carousel-inner{
-    height: 800px;
-    background-color: black;
-} */
 p,h3{
     font-family: Arial, Helvetica, sans-serif !important;
 }
@@ -48,5 +44,5 @@ p,h3{
 
 
 #lista-carrinho input {
-    width: 50px; /* Defina a largura desejada para o input */
+    width: 50px; 
   }

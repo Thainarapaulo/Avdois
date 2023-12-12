@@ -91,11 +91,12 @@ function exibirCarrinho() {
   
     exibirCarrinho();
   }
-
+// Finalizar compra
   function finalizarCompra() {
    
     alert("Compra finalizada! Obrigado por sua compra.");
   }
+  // Efeito slide
   var slider = $("#slider");
   $("#animacao7").on('click',function(){
     slider.slideToggle(1000);
