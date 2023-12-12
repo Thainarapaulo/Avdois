@@ -93,7 +93,7 @@ function exibirCarrinho() {
   }
 // Finalizar compra
   function finalizarCompra() {
-   
+    limparCarrinho();
     alert("Compra finalizada! Obrigado por sua compra.");
   }
   // Efeito slide
